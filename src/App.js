@@ -9,6 +9,8 @@ import Admin from './components/Layout/Admin';
 import StudentManager from './features/studentManager/StudentManager';
 import AddStudent from './features/studentManager/AddStudent';
 import EditStudent from './features/studentManager/EditStudent';
+import SearchValue from './components/Common/Search';
+
 
 function App() {
 

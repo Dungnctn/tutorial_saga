@@ -4,7 +4,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import SearchValue from '../../components/Common/Search';
 import { studentAction } from './studentSlice';
+
 const StudentManager = () => {
   const dispatch = useDispatch();
   const students = useSelector((state) => state.student.value);
@@ -12,9 +14,10 @@ const StudentManager = () => {
   useEffect(() => {
     dispatch(studentAction.getAllStudent());
     
-  } ,[dispatch]);
+  }, []);
 
   // console.log('student',students);
+    
     const columns = [
         {
           title: '#',
@@ -77,6 +80,7 @@ const StudentManager = () => {
       }) ;
   return (
     <div>
+      <SearchValue />
       <Button className='float-left'><NavLink to={'/admin/student/add'}>Add</NavLink></Button>
       <Table columns={columns} dataSource={dataSource} />
     </div>

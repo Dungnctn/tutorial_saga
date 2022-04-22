@@ -1,17 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    value: []
+    loadding: false,
+    value: [],
+    valueSearch: {}
 }
 
 const studentSlice = createSlice({
-    loadding:false,
+    
     name: "student",
     initialState,
     reducers: {
         getAllStudent(state, action) {
             state.loadding = true;
-            console.log('all',action.payload);
         },
 
         getLoadingListStudent(state, action){
@@ -19,26 +20,37 @@ const studentSlice = createSlice({
             state.value = action.payload;
         },
 
-        getByIdStudent(state, action) {
+        setSearchStudent(state, action) {
+            state.loadding = true;
+            // state.value = action.payload;
+        },
+
+        getSearch(state, action) {
+            state.loadding = false;
+            // console.log('get',action.payload);
+            state.value = action.payload;
+        },
+
+        getByIdStudent(state, action) { 
             state.value = action.payload
         },
         
         addloadingStudent(state, action) {
             // console.log('loading',action.payload);
-            state.loadding = true
+            state.loadding = false;
             state.value.push( action.payload );
         },
 
         addLoadStudent(state, action) {
-            // console.log('handle student');
-            // console.log('load',action.payload);
             state.loadding = false;
+
             // state.value.unshift(action.payload);
         },
 
         editStudent(state, action) {
             state.loadding = false;
             state.value = state.value.map(item => item.id === action.payload.id ? action.payload : item );
+
         },
 
         removeStudent(state, action) {
@@ -48,7 +60,7 @@ const studentSlice = createSlice({
             if(alert){  
                 state.value = state.value.filter(item => item.id !== action.payload);
             }
-            // state.value.filter((todo, i) => i !== action.payload.id)
+            
         },
     }
 })

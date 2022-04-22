@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Nguyen Van A",
-      "age": 20,
+      "age": "18",
       "email": "abc@gmail.com",
       "phone": "0123456",
       "address": "Hà Nội",
@@ -11,7 +11,7 @@
     },
     {
       "name": "admin",
-      "age": "20",
+      "age": "10",
       "email": "huyenciu10091992@gmail.com",
       "phone": "0865998931",
       "address": "thị trấn PT",
@@ -19,21 +19,21 @@
       "id": 2
     },
     {
-      "name": "Dungncph16456",
+      "name": "admin",
       "age": "20",
-      "email": "Dungnc0402@gmail.com",
+      "email": "member@gmail.com",
       "phone": "0865998931",
-      "address": "ssc",
-      "code": "sss",
+      "address": "Sài gohnf",
+      "code": "lll",
       "id": 3
     },
     {
       "name": "Dungncph16456",
-      "age": "10",
-      "email": "Dungnc0402@gmail.com",
+      "age": "20",
+      "email": "cresht2000@gmail.com",
       "phone": "0865998931",
-      "address": "ssc",
-      "code": "sss",
+      "address": "Quận 1 bình thạnh",
+      "code": "ssdkdskln",
       "id": 4
     }
   ]
